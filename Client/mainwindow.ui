@@ -6,83 +6,62 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>900</width>
+    <height>587</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>310</x>
-      <y>260</y>
-      <width>171</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>22</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Sign Up</string>
-    </property>
-   </widget>
    <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>230</x>
-      <y>120</y>
-      <width>321</width>
-      <height>34</height>
+      <x>320</x>
+      <y>21</y>
+      <width>561</width>
+      <height>521</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout">
+    <layout class="QVBoxLayout" name="verticalLayout">
      <item>
-      <widget class="QLabel" name="label">
-       <property name="font">
-        <font>
-         <pointsize>18</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Username</string>
-       </property>
-      </widget>
+      <widget class="QListView" name="listView_Chat"/>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit"/>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLineEdit" name="lineEdit_Message"/>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_Send">
+         <property name="text">
+          <string>Send</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </item>
     </layout>
    </widget>
    <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>230</x>
-      <y>180</y>
-      <width>321</width>
-      <height>34</height>
+      <x>10</x>
+      <y>0</y>
+      <width>301</width>
+      <height>26</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
-      <widget class="QLabel" name="label_2">
-       <property name="font">
-        <font>
-         <pointsize>18</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Password</string>
-       </property>
-      </widget>
+      <widget class="QLineEdit" name="lineEdit_Address"/>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_2"/>
+      <widget class="QPushButton" name="pushButton_Connect">
+       <property name="text">
+        <string>Connect</string>
+       </property>
+      </widget>
      </item>
     </layout>
    </widget>
@@ -92,7 +71,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>900</width>
      <height>21</height>
     </rect>
    </property>
