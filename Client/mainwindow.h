@@ -18,5 +18,7 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    QTcpSocket *socket;
+    QByteArray Data;
 };
 #endif // MAINWINDOW_H
