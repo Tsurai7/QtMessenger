@@ -44,3 +44,14 @@ void Server::onReadyRead()
         qDebug() << "Error while reading messages";
     }
 }
+
+void Server::SendToClient(QString message)
+{
+    Data.clear();
+
+    QDataStream out(&Data, QIODevice::WriteOnly);
+    out.setVersion(QDataStream::Qt_6_6);
+
+    out << message;
+    socket->write(Data);
+}
