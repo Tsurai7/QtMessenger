@@ -15,20 +15,20 @@ private:
     QDateTime UpdatedAt;
 
 public:
-    User(int id, const QString& name, const QString& password,
-         const QDateTime& createdAt, const QDateTime& updatedAt);
+    User();
 
     qint64 getId() const;
     QString getName() const;
     QString getPassword() const;
-    QDateTime getRegistrationDate() const;
-    QDateTime getModificationDate() const;
+    QDateTime getCreatedAt() const;
+    QDateTime getUpdatedAt() const;
 
 
+    void setId(const qint64& id);
     void setName(const QString& name);
     void setPassword(const QString& password);
-    void setRegistrationDate(const QDateTime& createdAt);
-    void setModificationDate(const QDateTime& updatedAt);
+    void setCreatedAt(const QDateTime& createdAt);
+    void setUpdatedAt(const QDateTime& updatedAt);
 };
 
 #endif // USER_H

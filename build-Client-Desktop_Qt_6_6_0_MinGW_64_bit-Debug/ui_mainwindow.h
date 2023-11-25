@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QListView>
 #include <QtWidgets/QMainWindow>
@@ -27,6 +28,7 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
+    QLabel *label_Username;
     QWidget *widget;
     QVBoxLayout *verticalLayout;
     QListView *listView_Chat;
@@ -44,12 +46,18 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(900, 587);
+        MainWindow->resize(900, 600);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
+        label_Username = new QLabel(centralwidget);
+        label_Username->setObjectName("label_Username");
+        label_Username->setGeometry(QRect(770, 0, 121, 31));
+        QFont font;
+        font.setPointSize(20);
+        label_Username->setFont(font);
         widget = new QWidget(centralwidget);
         widget->setObjectName("widget");
-        widget->setGeometry(QRect(320, 21, 561, 521));
+        widget->setGeometry(QRect(330, 30, 561, 521));
         verticalLayout = new QVBoxLayout(widget);
         verticalLayout->setObjectName("verticalLayout");
         verticalLayout->setContentsMargins(0, 0, 0, 0);
@@ -106,6 +114,7 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        label_Username->setText(QCoreApplication::translate("MainWindow", "name", nullptr));
         pushButton_Send->setText(QCoreApplication::translate("MainWindow", "Send", nullptr));
         pushButton_Connect->setText(QCoreApplication::translate("MainWindow", "Connect", nullptr));
     } // retranslateUi

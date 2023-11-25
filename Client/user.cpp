@@ -1,10 +1,6 @@
-// user.cpp
 #include "user.h"
 
-User::User(int id, const QString& name, const QString& password,
-           const QDateTime& createdAt, const QDateTime& updatedAt)
-    : Id(id), Name(name), Password(password),
-    CreatedAt(createdAt), UpdatedAt(updatedAt)
+User::User()
 {
 }
 
@@ -23,16 +19,21 @@ QString User::getPassword() const
     return Password;
 }
 
-QDateTime User::getRegistrationDate() const
+QDateTime User::getCreatedAt() const
 {
     return CreatedAt;
 }
 
-QDateTime User::getModificationDate() const
+QDateTime User::getUpdatedAt() const
 {
     return UpdatedAt;
 }
 
+
+void User::setId(const qint64& id)
+{
+    Id = id;
+}
 
 void User::setName(const QString& name)
 {
@@ -44,12 +45,12 @@ void User::setPassword(const QString& password)
     Password = password;
 }
 
-void User::setRegistrationDate(const QDateTime& createdAt)
+void User::setCreatedAt(const QDateTime& createdAt)
 {
     CreatedAt = createdAt;
 }
 
-void User::setModificationDate(const QDateTime& updatedAt)
+void User::setUpdatedAt(const QDateTime& updatedAt)
 {
     UpdatedAt = updatedAt;
 }

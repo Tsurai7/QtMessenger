@@ -3,6 +3,9 @@
 
 #include <QMainWindow>
 #include <QTcpSocket>
+#include "authwindow.h"
+#include <user.h>
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -16,9 +19,14 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+public slots:
+    void handleUserRegistration(User user);
+
 private:
     Ui::MainWindow *ui;
+    AuthWindow *authWindow;
     QTcpSocket *socket;
+    User *appUser;
     QByteArray Data;
 };
 #endif // MAINWINDOW_H

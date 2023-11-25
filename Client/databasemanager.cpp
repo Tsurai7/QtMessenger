@@ -1,4 +1,3 @@
-// databasemanager.cpp
 #include "databasemanager.h"
 
 #include <QDateTime>
@@ -6,15 +5,16 @@
 #include <QSqlQuery>
 #include <QDebug>
 
+
 DatabaseManager::DatabaseManager()
 {
+    database = QSqlDatabase::addDatabase("QSQLITE");
+    database.setDatabaseName("Users.db");
+    database.open();
 }
 
-bool DatabaseManager::open()
+bool DatabaseManager::CreateTable()
 {
-    database = QSqlDatabase::addDatabase("QSQLITE");
-    database.setDatabaseName("Users.sqlite");
-
     if (!database.open()) {
         qDebug() << "Error: Unable to open database." << database.lastError();
         return false;
@@ -65,3 +65,34 @@ bool DatabaseManager::addUser(const QString &username, const QString &password)
 
     return true;
 }
+
+
+bool DatabaseManager::getUserByUsername(const QString &username, User &user)
+{
+
+    if (!database.isOpen()) {
+        database.open();
+    }
+
+    QSqlQuery query;
+
+    query.prepare("SELECT * FROM users WHERE username = :username");
+    query.bindValue(":username", username);
+
+    if (!query.exec()) {
+        qDebug() << "Error: Unable to retrieve user." << query.lastError();
+        return false;
+    }
+
+    if (query.next()) {
+        user.setId(query.value("id").toInt());
+        user.setName(query.value("username").toString());
+        user.setPassword(query.value("password").toString());
+        user.setCreatedAt(query.value("createdAt").toDateTime());
+        user.setUpdatedAt(query.value("updatedAt").toDateTime());
+        return true;
+    }
+
+    return false;
+}
+
