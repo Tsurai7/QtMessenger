@@ -19,14 +19,24 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-public slots:
-    void handleUserRegistration(User user);
+
+private slots:
+    void OnReadyRead();
+    void handleUserRegistration(const User& user);
+    void on_pushButton_Connect_clicked();
+
+
+    void on_pushButton_Send_clicked();
+
+    void on_lineEdit_Message_returnPressed();
 
 private:
     Ui::MainWindow *ui;
     AuthWindow *authWindow;
     QTcpSocket *socket;
-    User *appUser;
+    User appUser;
     QByteArray Data;
+
+    void SendToServer(QString str);
 };
 #endif // MAINWINDOW_H

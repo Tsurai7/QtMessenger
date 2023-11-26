@@ -292,6 +292,12 @@ debug/moc_authwindow.cpp: ../Client/authwindow.h \
 		../../../Qt/6.6.0/mingw_64/include/QtSql/qtsqlglobal.h \
 		../../../Qt/6.6.0/mingw_64/include/QtSql/qtsql-config.h \
 		../../../Qt/6.6.0/mingw_64/include/QtSql/qtsqlexports.h \
+		../Client/user.h \
+		../../../Qt/6.6.0/mingw_64/include/QtCore/QString \
+		../../../Qt/6.6.0/mingw_64/include/QtCore/QDateTime \
+		../../../Qt/6.6.0/mingw_64/include/QtCore/qdatetime.h \
+		../../../Qt/6.6.0/mingw_64/include/QtCore/qcalendar.h \
+		../../../Qt/6.6.0/mingw_64/include/QtCore/qlocale.h \
 		debug/moc_predefs.h \
 		../../../Qt/6.6.0/mingw_64/bin/moc.exe
 	D:\Qt\6.6.0\mingw_64\bin\moc.exe $(DEFINES) --include D:/PetProjects/QtMessenger/build-Client-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/debug/moc_predefs.h -ID:/Qt/6.6.0/mingw_64/mkspecs/win32-g++ -ID:/PetProjects/QtMessenger/Client -ID:/Qt/6.6.0/mingw_64/include -ID:/Qt/6.6.0/mingw_64/include/QtWidgets -ID:/Qt/6.6.0/mingw_64/include/QtGui -ID:/Qt/6.6.0/mingw_64/include/QtNetwork -ID:/Qt/6.6.0/mingw_64/include/QtSql -ID:/Qt/6.6.0/mingw_64/include/QtCore -I. -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -ID:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -ID:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include ..\Client\authwindow.h -o debug\moc_authwindow.cpp
@@ -468,6 +474,15 @@ debug/moc_mainwindow.cpp: ../Client/mainwindow.h \
 		../../../Qt/6.6.0/mingw_64/include/QtNetwork/qtnetworkexports.h \
 		../../../Qt/6.6.0/mingw_64/include/QtNetwork/qabstractsocket.h \
 		../../../Qt/6.6.0/mingw_64/include/QtNetwork/qhostaddress.h \
+		../Client/authwindow.h \
+		../../../Qt/6.6.0/mingw_64/include/QtWidgets/QDialog \
+		../../../Qt/6.6.0/mingw_64/include/QtWidgets/qdialog.h \
+		../Client/databasemanager.h \
+		../../../Qt/6.6.0/mingw_64/include/QtSql/QSqlDatabase \
+		../../../Qt/6.6.0/mingw_64/include/QtSql/qsqldatabase.h \
+		../../../Qt/6.6.0/mingw_64/include/QtSql/qtsqlglobal.h \
+		../../../Qt/6.6.0/mingw_64/include/QtSql/qtsql-config.h \
+		../../../Qt/6.6.0/mingw_64/include/QtSql/qtsqlexports.h \
 		../Client/user.h \
 		../../../Qt/6.6.0/mingw_64/include/QtCore/QString \
 		../../../Qt/6.6.0/mingw_64/include/QtCore/QDateTime \
@@ -675,51 +690,13 @@ debug/authwindow.o: ../Client/authwindow.cpp ../Client/authwindow.h \
 		../../../Qt/6.6.0/mingw_64/include/QtSql/qtsqlglobal.h \
 		../../../Qt/6.6.0/mingw_64/include/QtSql/qtsql-config.h \
 		../../../Qt/6.6.0/mingw_64/include/QtSql/qtsqlexports.h \
-		ui_authwindow.h \
-		../../../Qt/6.6.0/mingw_64/include/QtCore/QVariant \
-		../../../Qt/6.6.0/mingw_64/include/QtWidgets/QApplication \
-		../../../Qt/6.6.0/mingw_64/include/QtWidgets/qapplication.h \
-		../../../Qt/6.6.0/mingw_64/include/QtCore/qcoreapplication.h \
-		../../../Qt/6.6.0/mingw_64/include/QtCore/qeventloop.h \
-		../../../Qt/6.6.0/mingw_64/include/QtCore/qcoreapplication_platform.h \
-		../../../Qt/6.6.0/mingw_64/include/QtCore/qfuture.h \
-		../../../Qt/6.6.0/mingw_64/include/QtCore/qfutureinterface.h \
-		../../../Qt/6.6.0/mingw_64/include/QtCore/qmutex.h \
-		../../../Qt/6.6.0/mingw_64/include/QtCore/qdeadlinetimer.h \
-		../../../Qt/6.6.0/mingw_64/include/QtCore/qelapsedtimer.h \
-		../../../Qt/6.6.0/mingw_64/include/QtCore/qtsan_impl.h \
-		../../../Qt/6.6.0/mingw_64/include/QtCore/qresultstore.h \
-		../../../Qt/6.6.0/mingw_64/include/QtCore/qfuture_impl.h \
-		../../../Qt/6.6.0/mingw_64/include/QtCore/qthreadpool.h \
-		../../../Qt/6.6.0/mingw_64/include/QtCore/qthread.h \
-		../../../Qt/6.6.0/mingw_64/include/QtCore/qrunnable.h \
-		../../../Qt/6.6.0/mingw_64/include/QtCore/qexception.h \
-		../../../Qt/6.6.0/mingw_64/include/QtCore/qpromise.h \
-		../../../Qt/6.6.0/mingw_64/include/QtGui/qguiapplication.h \
-		../../../Qt/6.6.0/mingw_64/include/QtGui/qinputmethod.h \
+		../Client/user.h \
+		../../../Qt/6.6.0/mingw_64/include/QtCore/QString \
+		../../../Qt/6.6.0/mingw_64/include/QtCore/QDateTime \
+		../../../Qt/6.6.0/mingw_64/include/QtCore/qdatetime.h \
+		../../../Qt/6.6.0/mingw_64/include/QtCore/qcalendar.h \
 		../../../Qt/6.6.0/mingw_64/include/QtCore/qlocale.h \
-		../../../Qt/6.6.0/mingw_64/include/QtGui/qguiapplication_platform.h \
-		../../../Qt/6.6.0/mingw_64/include/QtWidgets/QHBoxLayout \
-		../../../Qt/6.6.0/mingw_64/include/QtWidgets/qboxlayout.h \
-		../../../Qt/6.6.0/mingw_64/include/QtWidgets/qlayout.h \
-		../../../Qt/6.6.0/mingw_64/include/QtWidgets/qlayoutitem.h \
-		../../../Qt/6.6.0/mingw_64/include/QtWidgets/qgridlayout.h \
-		../../../Qt/6.6.0/mingw_64/include/QtWidgets/QLabel \
-		../../../Qt/6.6.0/mingw_64/include/QtWidgets/qlabel.h \
-		../../../Qt/6.6.0/mingw_64/include/QtWidgets/qframe.h \
-		../../../Qt/6.6.0/mingw_64/include/QtGui/qpicture.h \
-		../../../Qt/6.6.0/mingw_64/include/QtGui/qtextdocument.h \
-		../../../Qt/6.6.0/mingw_64/include/QtWidgets/QLineEdit \
-		../../../Qt/6.6.0/mingw_64/include/QtWidgets/qlineedit.h \
-		../../../Qt/6.6.0/mingw_64/include/QtGui/qtextcursor.h \
-		../../../Qt/6.6.0/mingw_64/include/QtGui/qtextformat.h \
-		../../../Qt/6.6.0/mingw_64/include/QtGui/qpen.h \
-		../../../Qt/6.6.0/mingw_64/include/QtGui/qtextoption.h \
-		../../../Qt/6.6.0/mingw_64/include/QtWidgets/QPushButton \
-		../../../Qt/6.6.0/mingw_64/include/QtWidgets/qpushbutton.h \
-		../../../Qt/6.6.0/mingw_64/include/QtWidgets/qabstractbutton.h \
-		../../../Qt/6.6.0/mingw_64/include/QtWidgets/QVBoxLayout \
-		../../../Qt/6.6.0/mingw_64/include/QtWidgets/QWidget \
+		ui_authwindow.h \
 		../../../Qt/6.6.0/mingw_64/include/QtWidgets/QMessageBox \
 		../../../Qt/6.6.0/mingw_64/include/QtWidgets/qmessagebox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\authwindow.o ..\Client\authwindow.cpp
@@ -799,6 +776,8 @@ debug/databasemanager.o: ../Client/databasemanager.cpp ../Client/databasemanager
 		../../../Qt/6.6.0/mingw_64/include/QtCore/qutf8stringview.h \
 		../../../Qt/6.6.0/mingw_64/include/QtCore/qstringtokenizer.h \
 		../../../Qt/6.6.0/mingw_64/include/QtCore/qstringbuilder.h \
+		../Client/user.h \
+		../../../Qt/6.6.0/mingw_64/include/QtCore/QString \
 		../../../Qt/6.6.0/mingw_64/include/QtCore/QDateTime \
 		../../../Qt/6.6.0/mingw_64/include/QtCore/qdatetime.h \
 		../../../Qt/6.6.0/mingw_64/include/QtCore/qcalendar.h \
@@ -1022,12 +1001,6 @@ debug/main.o: ../Client/main.cpp ../Client/mainwindow.h \
 		../../../Qt/6.6.0/mingw_64/include/QtNetwork/qtnetworkexports.h \
 		../../../Qt/6.6.0/mingw_64/include/QtNetwork/qabstractsocket.h \
 		../../../Qt/6.6.0/mingw_64/include/QtNetwork/qhostaddress.h \
-		../Client/user.h \
-		../../../Qt/6.6.0/mingw_64/include/QtCore/QString \
-		../../../Qt/6.6.0/mingw_64/include/QtCore/QDateTime \
-		../../../Qt/6.6.0/mingw_64/include/QtCore/qdatetime.h \
-		../../../Qt/6.6.0/mingw_64/include/QtCore/qcalendar.h \
-		../../../Qt/6.6.0/mingw_64/include/QtCore/qlocale.h \
 		../Client/authwindow.h \
 		../../../Qt/6.6.0/mingw_64/include/QtWidgets/QDialog \
 		../../../Qt/6.6.0/mingw_64/include/QtWidgets/qdialog.h \
@@ -1037,6 +1010,12 @@ debug/main.o: ../Client/main.cpp ../Client/mainwindow.h \
 		../../../Qt/6.6.0/mingw_64/include/QtSql/qtsqlglobal.h \
 		../../../Qt/6.6.0/mingw_64/include/QtSql/qtsql-config.h \
 		../../../Qt/6.6.0/mingw_64/include/QtSql/qtsqlexports.h \
+		../Client/user.h \
+		../../../Qt/6.6.0/mingw_64/include/QtCore/QString \
+		../../../Qt/6.6.0/mingw_64/include/QtCore/QDateTime \
+		../../../Qt/6.6.0/mingw_64/include/QtCore/qdatetime.h \
+		../../../Qt/6.6.0/mingw_64/include/QtCore/qcalendar.h \
+		../../../Qt/6.6.0/mingw_64/include/QtCore/qlocale.h \
 		../../../Qt/6.6.0/mingw_64/include/QtWidgets/QApplication \
 		../../../Qt/6.6.0/mingw_64/include/QtWidgets/qapplication.h \
 		../../../Qt/6.6.0/mingw_64/include/QtCore/qcoreapplication.h \
@@ -1232,74 +1211,22 @@ debug/mainwindow.o: ../Client/mainwindow.cpp ../Client/mainwindow.h \
 		../../../Qt/6.6.0/mingw_64/include/QtNetwork/qtnetworkexports.h \
 		../../../Qt/6.6.0/mingw_64/include/QtNetwork/qabstractsocket.h \
 		../../../Qt/6.6.0/mingw_64/include/QtNetwork/qhostaddress.h \
+		../Client/authwindow.h \
+		../../../Qt/6.6.0/mingw_64/include/QtWidgets/QDialog \
+		../../../Qt/6.6.0/mingw_64/include/QtWidgets/qdialog.h \
+		../Client/databasemanager.h \
+		../../../Qt/6.6.0/mingw_64/include/QtSql/QSqlDatabase \
+		../../../Qt/6.6.0/mingw_64/include/QtSql/qsqldatabase.h \
+		../../../Qt/6.6.0/mingw_64/include/QtSql/qtsqlglobal.h \
+		../../../Qt/6.6.0/mingw_64/include/QtSql/qtsql-config.h \
+		../../../Qt/6.6.0/mingw_64/include/QtSql/qtsqlexports.h \
 		../Client/user.h \
 		../../../Qt/6.6.0/mingw_64/include/QtCore/QString \
 		../../../Qt/6.6.0/mingw_64/include/QtCore/QDateTime \
 		../../../Qt/6.6.0/mingw_64/include/QtCore/qdatetime.h \
 		../../../Qt/6.6.0/mingw_64/include/QtCore/qcalendar.h \
 		../../../Qt/6.6.0/mingw_64/include/QtCore/qlocale.h \
-		ui_mainwindow.h \
-		../../../Qt/6.6.0/mingw_64/include/QtCore/QVariant \
-		../../../Qt/6.6.0/mingw_64/include/QtWidgets/QApplication \
-		../../../Qt/6.6.0/mingw_64/include/QtWidgets/qapplication.h \
-		../../../Qt/6.6.0/mingw_64/include/QtCore/qcoreapplication.h \
-		../../../Qt/6.6.0/mingw_64/include/QtCore/qeventloop.h \
-		../../../Qt/6.6.0/mingw_64/include/QtCore/qcoreapplication_platform.h \
-		../../../Qt/6.6.0/mingw_64/include/QtCore/qfuture.h \
-		../../../Qt/6.6.0/mingw_64/include/QtCore/qfutureinterface.h \
-		../../../Qt/6.6.0/mingw_64/include/QtCore/qmutex.h \
-		../../../Qt/6.6.0/mingw_64/include/QtCore/qdeadlinetimer.h \
-		../../../Qt/6.6.0/mingw_64/include/QtCore/qelapsedtimer.h \
-		../../../Qt/6.6.0/mingw_64/include/QtCore/qtsan_impl.h \
-		../../../Qt/6.6.0/mingw_64/include/QtCore/qresultstore.h \
-		../../../Qt/6.6.0/mingw_64/include/QtCore/qfuture_impl.h \
-		../../../Qt/6.6.0/mingw_64/include/QtCore/qthreadpool.h \
-		../../../Qt/6.6.0/mingw_64/include/QtCore/qthread.h \
-		../../../Qt/6.6.0/mingw_64/include/QtCore/qrunnable.h \
-		../../../Qt/6.6.0/mingw_64/include/QtCore/qexception.h \
-		../../../Qt/6.6.0/mingw_64/include/QtCore/qpromise.h \
-		../../../Qt/6.6.0/mingw_64/include/QtGui/qguiapplication.h \
-		../../../Qt/6.6.0/mingw_64/include/QtGui/qinputmethod.h \
-		../../../Qt/6.6.0/mingw_64/include/QtGui/qguiapplication_platform.h \
-		../../../Qt/6.6.0/mingw_64/include/QtWidgets/QHBoxLayout \
-		../../../Qt/6.6.0/mingw_64/include/QtWidgets/qboxlayout.h \
-		../../../Qt/6.6.0/mingw_64/include/QtWidgets/qlayout.h \
-		../../../Qt/6.6.0/mingw_64/include/QtWidgets/qlayoutitem.h \
-		../../../Qt/6.6.0/mingw_64/include/QtWidgets/qgridlayout.h \
-		../../../Qt/6.6.0/mingw_64/include/QtWidgets/QLineEdit \
-		../../../Qt/6.6.0/mingw_64/include/QtWidgets/qlineedit.h \
-		../../../Qt/6.6.0/mingw_64/include/QtWidgets/qframe.h \
-		../../../Qt/6.6.0/mingw_64/include/QtGui/qtextcursor.h \
-		../../../Qt/6.6.0/mingw_64/include/QtGui/qtextdocument.h \
-		../../../Qt/6.6.0/mingw_64/include/QtGui/qtextformat.h \
-		../../../Qt/6.6.0/mingw_64/include/QtGui/qpen.h \
-		../../../Qt/6.6.0/mingw_64/include/QtGui/qtextoption.h \
-		../../../Qt/6.6.0/mingw_64/include/QtWidgets/QListView \
-		../../../Qt/6.6.0/mingw_64/include/QtWidgets/qlistview.h \
-		../../../Qt/6.6.0/mingw_64/include/QtWidgets/qabstractitemview.h \
-		../../../Qt/6.6.0/mingw_64/include/QtWidgets/qabstractscrollarea.h \
-		../../../Qt/6.6.0/mingw_64/include/QtCore/qabstractitemmodel.h \
-		../../../Qt/6.6.0/mingw_64/include/QtCore/qitemselectionmodel.h \
-		../../../Qt/6.6.0/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
-		../../../Qt/6.6.0/mingw_64/include/QtWidgets/qstyleoption.h \
-		../../../Qt/6.6.0/mingw_64/include/QtWidgets/qabstractspinbox.h \
-		../../../Qt/6.6.0/mingw_64/include/QtGui/qvalidator.h \
-		../../../Qt/6.6.0/mingw_64/include/QtCore/qregularexpression.h \
-		../../../Qt/6.6.0/mingw_64/include/QtWidgets/qslider.h \
-		../../../Qt/6.6.0/mingw_64/include/QtWidgets/qabstractslider.h \
-		../../../Qt/6.6.0/mingw_64/include/QtWidgets/qstyle.h \
-		../../../Qt/6.6.0/mingw_64/include/QtWidgets/qtabbar.h \
-		../../../Qt/6.6.0/mingw_64/include/QtWidgets/qrubberband.h \
-		../../../Qt/6.6.0/mingw_64/include/QtWidgets/QMenuBar \
-		../../../Qt/6.6.0/mingw_64/include/QtWidgets/qmenubar.h \
-		../../../Qt/6.6.0/mingw_64/include/QtWidgets/qmenu.h \
-		../../../Qt/6.6.0/mingw_64/include/QtWidgets/QPushButton \
-		../../../Qt/6.6.0/mingw_64/include/QtWidgets/qpushbutton.h \
-		../../../Qt/6.6.0/mingw_64/include/QtWidgets/qabstractbutton.h \
-		../../../Qt/6.6.0/mingw_64/include/QtWidgets/QStatusBar \
-		../../../Qt/6.6.0/mingw_64/include/QtWidgets/qstatusbar.h \
-		../../../Qt/6.6.0/mingw_64/include/QtWidgets/QVBoxLayout \
-		../../../Qt/6.6.0/mingw_64/include/QtWidgets/QWidget
+		ui_mainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\mainwindow.o ..\Client\mainwindow.cpp
 
 debug/user.o: ../Client/user.cpp ../Client/user.h \

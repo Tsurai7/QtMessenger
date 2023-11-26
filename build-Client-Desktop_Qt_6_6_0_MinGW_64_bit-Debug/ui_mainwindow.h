@@ -14,12 +14,11 @@
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
-#include <QtWidgets/QListView>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
-#include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QTextBrowser>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -29,16 +28,15 @@ class Ui_MainWindow
 public:
     QWidget *centralwidget;
     QLabel *label_Username;
-    QWidget *widget;
-    QVBoxLayout *verticalLayout;
-    QListView *listView_Chat;
-    QHBoxLayout *horizontalLayout;
-    QLineEdit *lineEdit_Message;
-    QPushButton *pushButton_Send;
-    QWidget *widget1;
+    QWidget *layoutWidget;
     QHBoxLayout *horizontalLayout_2;
     QLineEdit *lineEdit_Address;
     QPushButton *pushButton_Connect;
+    QTextBrowser *textBrowser;
+    QWidget *widget;
+    QHBoxLayout *horizontalLayout_3;
+    QLineEdit *lineEdit_Message;
+    QPushButton *pushButton_Send;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -55,47 +53,40 @@ public:
         QFont font;
         font.setPointSize(20);
         label_Username->setFont(font);
-        widget = new QWidget(centralwidget);
-        widget->setObjectName("widget");
-        widget->setGeometry(QRect(330, 30, 561, 521));
-        verticalLayout = new QVBoxLayout(widget);
-        verticalLayout->setObjectName("verticalLayout");
-        verticalLayout->setContentsMargins(0, 0, 0, 0);
-        listView_Chat = new QListView(widget);
-        listView_Chat->setObjectName("listView_Chat");
-
-        verticalLayout->addWidget(listView_Chat);
-
-        horizontalLayout = new QHBoxLayout();
-        horizontalLayout->setObjectName("horizontalLayout");
-        lineEdit_Message = new QLineEdit(widget);
-        lineEdit_Message->setObjectName("lineEdit_Message");
-
-        horizontalLayout->addWidget(lineEdit_Message);
-
-        pushButton_Send = new QPushButton(widget);
-        pushButton_Send->setObjectName("pushButton_Send");
-
-        horizontalLayout->addWidget(pushButton_Send);
-
-
-        verticalLayout->addLayout(horizontalLayout);
-
-        widget1 = new QWidget(centralwidget);
-        widget1->setObjectName("widget1");
-        widget1->setGeometry(QRect(10, 0, 301, 26));
-        horizontalLayout_2 = new QHBoxLayout(widget1);
+        layoutWidget = new QWidget(centralwidget);
+        layoutWidget->setObjectName("layoutWidget");
+        layoutWidget->setGeometry(QRect(10, 0, 301, 26));
+        horizontalLayout_2 = new QHBoxLayout(layoutWidget);
         horizontalLayout_2->setObjectName("horizontalLayout_2");
         horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
-        lineEdit_Address = new QLineEdit(widget1);
+        lineEdit_Address = new QLineEdit(layoutWidget);
         lineEdit_Address->setObjectName("lineEdit_Address");
 
         horizontalLayout_2->addWidget(lineEdit_Address);
 
-        pushButton_Connect = new QPushButton(widget1);
+        pushButton_Connect = new QPushButton(layoutWidget);
         pushButton_Connect->setObjectName("pushButton_Connect");
 
         horizontalLayout_2->addWidget(pushButton_Connect);
+
+        textBrowser = new QTextBrowser(centralwidget);
+        textBrowser->setObjectName("textBrowser");
+        textBrowser->setGeometry(QRect(320, 40, 557, 461));
+        widget = new QWidget(centralwidget);
+        widget->setObjectName("widget");
+        widget->setGeometry(QRect(320, 510, 561, 26));
+        horizontalLayout_3 = new QHBoxLayout(widget);
+        horizontalLayout_3->setObjectName("horizontalLayout_3");
+        horizontalLayout_3->setContentsMargins(0, 0, 0, 0);
+        lineEdit_Message = new QLineEdit(widget);
+        lineEdit_Message->setObjectName("lineEdit_Message");
+
+        horizontalLayout_3->addWidget(lineEdit_Message);
+
+        pushButton_Send = new QPushButton(widget);
+        pushButton_Send->setObjectName("pushButton_Send");
+
+        horizontalLayout_3->addWidget(pushButton_Send);
 
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
@@ -115,8 +106,8 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         label_Username->setText(QCoreApplication::translate("MainWindow", "name", nullptr));
-        pushButton_Send->setText(QCoreApplication::translate("MainWindow", "Send", nullptr));
         pushButton_Connect->setText(QCoreApplication::translate("MainWindow", "Connect", nullptr));
+        pushButton_Send->setText(QCoreApplication::translate("MainWindow", "Send", nullptr));
     } // retranslateUi
 
 };

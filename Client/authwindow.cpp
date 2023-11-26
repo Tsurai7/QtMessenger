@@ -42,6 +42,7 @@ void AuthWindow::onSignUpButtonClicked()
         User user = User();
         dbManager->getUserByUsername(username, user);
         emit userRegistered(user);
+        qDebug() << "Emitting userRegistered signal with user:" << user.getName();
         this->accept();
     }
 

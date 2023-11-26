@@ -38,6 +38,7 @@ void Server::onReadyRead()
         QString inputStr;
         in >> inputStr;
         qDebug() << inputStr;
+        SendToClient(inputStr);
     }
     else
     {
@@ -53,5 +54,10 @@ void Server::SendToClient(QString message)
     out.setVersion(QDataStream::Qt_6_6);
 
     out << message;
-    socket->write(Data);
+    //socket->write(Data);
+
+    for(int i = 0; i < Sockets.size(); i++)
+    {
+        Sockets[i]->write(Data);
+    }
 }

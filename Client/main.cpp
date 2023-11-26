@@ -10,9 +10,5 @@ int main(int argc, char *argv[])
     MainWindow mainWindow;
     mainWindow.show();
 
-    AuthWindow authWindow;
-    authWindow.show();
-    authWindow.setModal(true);
-
     return a.exec();
 }
